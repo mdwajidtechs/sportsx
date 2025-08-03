@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>  
+  <!-- ✅ Theme color for browser UI -->
   <meta name="theme-color" content="#EDC52F">
-  <!-- ✅ Base HREF must start and end with slash -->
+
+  <!-- ✅ Base HREF for subfolder deployment -->
+  <!-- Must start AND end with a slash -->
   <base href="/sportsx/" />
+
   <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-  <!-- iOS meta tags & icons -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="description" content="Sportx - All sports products and accessories across India.">
+
+  <!-- ✅ iOS & PWA meta -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="reallands">
+  <meta name="apple-mobile-web-app-title" content="Sportx">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
-  <!-- Favicon -->
+
+  <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
+
   <title>
-    Sportx | All Sports | sport products | Hyderabad Sports | All India Sports | Cricket | Football
+    Sportx | All Sports | Sports Products | Hyderabad Sports | All India Sports | Cricket | Football
   </title>
+
+  <!-- ✅ Loader Styles -->
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      background-color: #EDC52F; /* Full page background */
+      background-color: #EDC52F; /* Page background */
     }
 
     #loader {
@@ -39,7 +48,7 @@
 
     .spinner {
       border: 6px solid #f3f3f3;
-      border-top: 6px solid #333; /* Contrast */
+      border-top: 6px solid #333;
       border-radius: 50%;
       width: 50px;
       height: 50px;
@@ -54,15 +63,15 @@
 </head>
 
 <body>
-  <!-- ✅ Spinner Loader -->
+  <!-- ✅ Full-page Loader -->
   <div id="loader">
     <div class="spinner"></div>
   </div>
 
-  <!-- ✅ Flutter App Bootstrap -->
+  <!-- ✅ Flutter Web Bootstrap -->
   <script src="flutter_bootstrap.js" async></script>
 
-  <!-- ✅ Remove Loader When Flutter Loads -->
+  <!-- ✅ Remove Loader When Flutter App Loads -->
   <script>
     window.addEventListener('load', function () {
       const observer = new MutationObserver(() => {
@@ -72,7 +81,6 @@
           observer.disconnect();
         }
       });
-
       observer.observe(document.body, { childList: true, subtree: true });
     });
   </script>
