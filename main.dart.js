@@ -85337,7 +85337,7 @@ case 2:return A.G(null,r)}})
 return A.H($async$tZ,r)}}
 A.Ln.prototype={
 H(a){var s=null
-return new A.zr("/onboarding",A.aTp(),"Your App Title",A.uG(s,s,B.jR,s),!1,s)}}
+return new A.zr("/onboarding",A.aTp(),"Welcome To Sports X",A.uG(s,s,B.jR,s),!1,s)}}
 A.pF.prototype={
 aa(){return A.aOV()}}
 A.Er.prototype={
