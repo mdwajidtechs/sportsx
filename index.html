@@ -29,10 +29,70 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>reallands</title>
-  <link rel="manifest" href="manifest.json">
+ <title>Sportx  | All Sports | sport products| hyderabad Sports | all india sports 
+|cricket sport 
+|foot ball </title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #EDC52F; /* Full page background */
+    }
+
+
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #EDC52F;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+
+    .spinner {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #333; /* Contrast */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
+
 <body>
+  <!-- ✅ Spinner Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- ✅ Flutter App Bootstrap -->
   <script src="flutter_bootstrap.js" async></script>
+
+  <!-- ✅ Remove Loader When Flutter Loads -->
+  <script>
+    window.addEventListener('load', function () {
+      const observer = new MutationObserver(() => {
+        const canvas = document.querySelector('flt-glass-pane, flutter-view');
+        if (canvas) {
+          document.getElementById('loader')?.remove();
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+    });
+  </script>
 </body>
 </html>
