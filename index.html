@@ -1,20 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>  <meta name="theme-color" content="#EDC52F">
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+<head>  
+  <meta name="theme-color" content="#EDC52F">
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/sportsx">
+  <!-- ✅ Base HREF must start and end with slash -->
+  <base href="/sportsx/" />
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -29,9 +19,9 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
- <title>Sportx  | All Sports | sport products| hyderabad Sports | all india sports 
-|cricket sport 
-|foot ball </title>
+  <title>
+    Sportx | All Sports | sport products | Hyderabad Sports | All India Sports | Cricket | Football
+  </title>
 
   <style>
     html, body {
@@ -39,7 +29,6 @@
       padding: 0;
       background-color: #EDC52F; /* Full page background */
     }
-
 
     #loader {
       position: fixed;
@@ -53,7 +42,6 @@
       justify-content: center;
       z-index: 9999;
     }
-
 
     .spinner {
       border: 6px solid #f3f3f3;
